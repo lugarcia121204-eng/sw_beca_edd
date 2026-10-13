@@ -1,0 +1,94 @@
+<template>
+    <div class="flex h-screen bg-gray-50 overflow-hidden">
+        <AppSidebar :menu="menuConfigs.superAdmin" />
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Page Content -->
+            <main class="flex-1 overflow-y-auto bg-gray-50 p-6">
+                <!-- Toggle Button -->
+                <div class="mb-4">
+                    <!-- Mobile Menu Button -->
+                    <button
+                        @click="sidebarOpen = !sidebarOpen"
+                        class="lg:hidden p-2 rounded-md text-gray-900 hover:bg-gray-200 transition-colors duration-200"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" class="w-6 h-6">
+                            <path d="M460-320v-320L300-480l160 160ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm440-80h120v-560H640v560Zm-80 0v-560H200v560h360Zm80 0h120-120Z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Desktop Toggle Button -->
+                    <button
+                        @click="sidebarCollapsed = !sidebarCollapsed"
+                        class="hidden lg:block p-2 rounded-md text-gray-900 hover:bg-gray-200 transition-colors duration-200"
+                        :title="sidebarCollapsed ? 'Expandir sidebar' : 'Colapsar sidebar'"
+                    >
+                        <svg v-if="sidebarCollapsed" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" class="w-6 h-6">
+                            <path d="M460-320v-320L300-480l160 160ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm440-80h120v-560H640v560Zm-80 0v-560H200v560h360Zm80 0h120-120Z"/>
+                        </svg>
+                        <svg v-else xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" class="w-6 h-6">
+                            <path d="M300-640v320l160-160-160-160ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm440-80h120v-560H640v560Zm-80 0v-560H200v560h360Zm80 0h120-120Z"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <slot />
+            </main>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted, provide } from 'vue';
+import { menuConfigs } from '@/config/menu/menuConfig';
+import AppSidebar from '@/components/Sidebar/AppSidebar.vue';
+
+const sidebarOpen = ref(false);
+const sidebarCollapsed = ref(false);
+const isMobile = ref(typeof window !== 'undefined' ? window.innerWidth < 1024 : false);
+
+// Provide state to sidebar and other components
+provide('sidebarOpen', sidebarOpen);
+provide('sidebarCollapsed', sidebarCollapsed);
+provide('isMobile', isMobile);
+
+const checkMobile = () => {
+    isMobile.value = window.innerWidth < 1024;
+};
+
+onMounted(() => {
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', checkMobile);
+});
+</script>
+<style scoped>
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+</style>
+

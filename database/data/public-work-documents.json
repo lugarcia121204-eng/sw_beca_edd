@@ -1,0 +1,58 @@
+[
+  {
+    "source_key": "doc1",
+    "title": "Carta de Exclusividad Laboral",
+    "description": "Documento donde el docente manifiesta su compromiso exclusivo con el TecNM, declarando no exceder las 12 horas-semana en otras instituciones y autorizando la revisión con recursos humanos.",
+    "category": "formatos",
+    "url": "https://edd.tecnm.mx/formatos/2025/CARTA_EXCLUSIVIDAD_EDD2025.docx"
+  },
+  {
+    "source_key": "doc2",
+    "title": "Liberación de Actividades Académicas",
+    "description": "Constancia de cumplimiento de actividades académicas como asistencia a reuniones, programas de formación docente, asesorías, propuestas de mejora, sinodales de titulación y participación en eventos académicos.",
+    "category": "formatos",
+    "url": "https://edd.tecnm.mx/formatos/2025/Formato_Liberacion_de_Actividades_Academicas_2025.docx"
+  },
+  {
+    "source_key": "doc3",
+    "title": "Constancia Actividades Frente a Grupo",
+    "description": "Formato que certifica el cumplimiento de actividades docentes frente a grupo: elaboración de dosificación, evaluación de programas, entrega de informes, calificaciones y reportes finales del semestre.",
+    "category": "formatos",
+    "url": "https://edd.tecnm.mx/formatos/2025/Formato_Constancia_de_Liberacion_de_Actividades_Docentes_2025.docx"
+  },
+  {
+    "source_key": "doc4",
+    "title": "Lineamientos del Programa",
+    "description": "Documento oficial con la estructura completa del programa: presentación, bases de operación, tipos de personal beneficiado, fuentes de financiamiento, criterios de evaluación y responsabilidades de docentes participantes.",
+    "category": "guias",
+    "url": "https://edd.tecnm.mx/formatos/2025/LINEAMIENTOS_EDD_2025.pdf"
+  },
+  {
+    "source_key": "doc5",
+    "title": "Guía SPD - Integración de Expediente",
+    "description": "Guía oficial para integrar el expediente del programa EDD con requisitos, instrucciones de captura, documentos comprobatorios, evidencias y responsabilidades del docente en el portal www.edd.tecnm.mx",
+    "category": "guias",
+    "url": "https://edd.tecnm.mx/formatos/2025/FORMATO_SPD_2025.pdf"
+  },
+  {
+    "source_key": "doc6",
+    "title": "Convocatoria 2026 (Estática)",
+    "description": "Documento oficial de convocatoria del TecNM para el programa de estímulos 2025: bases de participación, registro, evaluación, estímulos diferenciados, suspensiones, responsabilidades y contacto oficial.",
+    "category": "convocatoria",
+    "url": "https://edd.tecnm.mx/formatos/2025/CONVOCATORIA_EDD_2025.pdf"
+  },
+  {
+    "source_key": "doc7",
+    "title": "Aviso de Privacidad Integral",
+    "description": "Documento legal del TecNM sobre protección de datos personales: fundamento legal, finalidades para recabar información, tratamiento, resguardo y derechos de los participantes según la Ley General de Protección de Datos.",
+    "category": "privacidad",
+    "url": "https://www.tecnm.mx/menu/proteccion_datos_personales/AVISO_DE_PRIVACIDAD_INTEGRAL_2023.pdf?doc=1"
+  },
+  {
+    "source_key": "doc8",
+    "title": "Aviso de Privacidad Simplificado",
+    "description": "Versión simplificada del aviso de privacidad con las finalidades principales: gestión de becas, otorgamiento de estímulos, expedición de certificados, trámites de cédulas profesionales y suscripción de convenios del TecNM.",
+    "category": "privacidad",
+    "url": "https://www.tecnm.mx/menu/proteccion_datos_personales/AVISO_DE_PRIVACIDAD_SIMPLIFICADO_2023.pdf?doc=1"
+  }
+]
